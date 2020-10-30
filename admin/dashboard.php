@@ -1,0 +1,369 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--title>AdminLTE 3 | Dashboard</title-->
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jquery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <!-- Time line css -->
+    <link rel="stylesheet" href="/dist/css/timeline.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link rel="stylesheet" href="/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- iCheck -->
+    <link rel="stylesheet" href="/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="/plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="/plugins/summernote/summernote-bs4.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  </head>
+  <body style="background: #efefef">
+    <div class="wrapper" style="margin: auto; padding: 3em">
+      <div class="row">
+        <div class='col-lg-9'>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="small-box bg-primary">
+                <div class="inner">
+                  <h3>150</h3>
+                  <p>Đơn hàng mới</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-dollar-sign"></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                  Xem thêm
+                  <i class="fas fa-arrow-circle-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3>0</h3>
+                  <p>Phiếu trả hàng</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-undo"></i>
+                </div>
+                <a href="javascript:void(0)" class="small-box-footer">
+                  Xem thêm
+                  <i class="fas fa-arrow-circle-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3>-0.4%</h3>
+                  <p>So với hôm qua</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-thumbs-down"></i>
+                </div>
+                <a href="javascript:void(0)" class="small-box-footer">
+                  Xem thêm
+                  <i class="fas fa-arrow-circle-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>+99.9%</h3>
+                  <p>So với cùng kì tháng trước</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-thumbs-up"></i>
+                </div>
+                <a href="javascript:void(0)" class="small-box-footer">
+                  Xem thêm
+                  <i class="fas fa-arrow-circle-right"></i>
+                </a>
+              </div>
+            </div>
+            <!-- main chart -->
+            <div class="col-sm-8">
+            </div>
+          </div>
+          <!-- minibox row -->
+          <!-- first chart -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Doanh thu tuần này</h3>
+              <div class="card-tools">
+                <span class="badge">
+                  <a href="javascript:void(0)" class="daterange" data-toggle="tooltip" id="daterange-picker">
+                    <span id="daterange-label">Tháng này</span>
+                    <i class="far fa-calendar-alt"></i>
+                  </a>
+                </span>
+                <span class="badge">
+                  <a href="javascript:void(0)">
+                    Chi tiết
+                    <i class="fas fa-arrow-circle-right"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- card header -->
+            <!-- card body -->
+            <div class="card-body">
+              <ul class="nav nav-tabs" id="product-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="sale-month" data-toggle="tab" href="#sale-month-content" role="tab" aria-controls="sale-month" aria-selected="true">Theo ngày</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="sale-hour" data-toggle="tab" href="#sale-hour-content" role="tab" aria-controls="sale-hour" aria-selected="false">Theo giờ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="sale-day" data-toggle="tab" href="#sale-day-content" role="tab" aria-controls="sale-day" aria-selected="false">Theo thứ</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div id="sale-month-content" role="tabpanel" class="tab-pane fade show active" aria-labelledby="sale-month-tab">
+                  <div>
+                    <canvas id="sale-chart-month" height="400"></canvas>
+                  </div>
+                  <div align="center">
+                    <i class="fas fa-square text-primary"></i>Chi nhánh trung tâm
+                  </div>
+                </div>
+                <div id="sale-hour-content" role="tabpanel" class="tab-pane fade" aria-labelledby="sale-hour-tab">
+                  <div>
+                    <canvas id="sale-chart-hour" height="400"></canvas>
+                  </div>
+                  <div align="center">
+                    <i class="fas fa-square text-primary"></i>Chi nhánh trung tâm
+                  </div>
+                </div>
+                <div id="sale-day-content" role="tabpanel" class="tab-pane fade" aria-labelledby="sale-day-tab">
+                  <div>
+                    <canvas id="sale-chart-day" height="400"></canvas>
+                  </div>
+                  <div align="center">
+                    <i class="fas fa-square text-primary"></i>Chi nhánh trung tâm
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end first chart -->
+          <!-- second chart -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Top sản phẩm bán chạy</h3>
+              <div class="card-tools">
+                <span class="badge">
+                  <a href="javascript:void(0)" class="daterange" data-toggle="tooltip" id="daterange-picker">
+                    <span id="daterange-label">Tháng này</span>
+                    <i class="far fa-calendar-alt"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div class="card-body">
+              <canvas height=400 id='top-product'></canvas>
+            </div>
+          </div>
+          <!-- end second chart -->
+        </div>
+        <!-- end first major column -->
+        <div class="col-lg-3">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Họat động gần đây</h3>
+            </div>
+            <!-- end card header -->
+            <div class="card-body">
+              <ul class="timeline">
+                <li>
+                  <a href="javascript:void(0)">Nguyễn Văn A</a>
+                  <a href="javascript:void(0)" class="float-right">26 Tháng 10, 2020</a>
+                  <p>Đã nhập một hàng với giá 0VND</p>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">Nguyễn Thị B</a>
+                  <a href="javascript:void(0)" class="float-right">24 Tháng 9, 2020</a>
+                  <p>Bán lỗ 10_000 tỷ</p>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">Lò Thị Vi Sóng</a>
+                  <a href="javascript:void(0)" class="float-right">22 Tháng 8, 2020</a>
+                  <p>Làm hỏng của công</p>
+                </li>
+              </ul>
+            </div>
+            <!-- end card body -->
+          </div>
+          <!-- end card -->
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="/plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="/plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="/plugins/moment/moment.min.js"></script>
+    <script src="/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/dist/js/adminlte.js"></script>
+    <script>
+      const customRangeLabel = "Ngày tùy chỉnh"
+      $('.daterange').daterangepicker({
+        ranges: {
+          'Hôm nay': [moment(), moment()],
+          'Hôm qua': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          '7 ngày gần đây': [moment().subtract(6, 'days'), moment()],
+          '30 ngày gần đây': [moment().subtract(29, 'days'), moment()],
+          'Tháng này': [moment().startOf('month'), moment().endOf('month')],
+          'Tháng trước': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        locale: {
+          customRangeLabel: customRangeLabel
+        },
+        startDate: moment().startOf('month'),
+        endDate: moment().endOf('month')
+      }, function (start, end, label) {
+        if (label === customRangeLabel) {
+          $('#daterange-label').html(start.format("DD/MM/YYYY") + " - " + end.format("DD/MM/YYYY"))
+        }
+        else {
+          $('#daterange-label').html(label)
+        }
+      })
+    </script>
+    <!-- sale chart -->
+    <script>
+      const range = (n) => new Array(n).fill(undefined).map((_, i) => i)
+const barchart_setup = (name, labels, data, horizontal) => {
+  const ticksStyle = {
+    fontColor: '#495057',
+    fontStyle: 'bold'
+  }
+
+  const mode = 'index'
+  const intersect = false
+
+  var scales = {}
+  scales[horizontal ? "yAxes" : "xAxes" ] = [{
+    gridLines: {
+      display      : true,
+      lineWidth    : '4px',
+      color        : 'rgba(0, 0, 0, .2)',
+      zeroLineColor: 'transparent'
+    },
+    ticks    : $.extend({
+      beginAtZero: true,
+      callback: function (value, index, values) {
+        if (value >= 1000) {
+          value /= 1000
+          value += 'k VND'
+        }
+        return value
+      }
+    }, ticksStyle)
+  }]
+  scales[horizontal ? "xAxes" : "yAxes"] = [{
+    display  : true,
+    gridLines: {
+      display: true,
+      lineWidth : '1em',
+      color : 'rgba(0, 0, 0, .2)',
+    },
+    ticks    : ticksStyle
+  }]
+  console.log(scales)
+
+  var $salesChart = $(name)
+  var salesChart = new Chart($salesChart, {
+    type: horizontal? 'horizontalBar' : 'bar',
+    data: {
+      labels  : labels,
+      datasets: [{
+        backgroundColor: '#007bff',
+        borderColor    : '#007bff',
+        data           : data,
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      tooltips           : {
+        mode     : mode,
+        intersect: intersect
+      },
+      hover              : {
+        mode     : mode,
+        intersect: intersect
+      },
+      legend             : {
+        display: false
+      },
+      scales             : scales
+    }
+  })
+}
+
+$(document).ready(() => {
+  const ndata = {
+    "month": 31,
+    "hour": 24,
+    "day": 7
+  };
+  ["month", "hour", "day"].map(t => {
+    const n = ndata[t]
+    const data = range(n).map(_ => Math.ceil(Math.random() * 10000))
+    const labels = range(n).map(x => x + 1)
+    barchart_setup("#sale-chart-" + t, labels, data, false);
+  })
+  barchart_setup("#top-product", range(10).map(x => "Hàng #" + (x + 1)), range(10).map(_ => Math.ceil(Math.random() * 100)), true);
+  const times = ["month", "hour", "day"];
+  times.map(t => {
+    $("#sale-" + t).click(() => {
+      settimeout(500, () => {
+        barchart_setup("#sale-chart-" + t, ndata[t])
+      })
+    })
+    $("#sale-chart-" + t).height(400);
+  })
+})
+    </script>
+  </body>
+</html>
