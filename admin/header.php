@@ -179,9 +179,13 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <div class="nav nav-pills nav-sidebar flex-column">
-            <a href="/" class="nav-link active">
+            <a href="/" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Tổng quan</p>
+            </a>
+            <a href="/datakh" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>Khách hàng</p>
             </a>
         </div>
       </nav>

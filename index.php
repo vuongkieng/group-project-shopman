@@ -8,9 +8,13 @@ echo("<h2>Xem cách cài .htaccess để cho mọi đường dẫn đều trỏ 
 if ($uri === "/" || $uri === "/admin/") {
   require("admin/dashboard.html");
 }
+elseif ($uri === "/datakh") {
+	require("admin/data_Khach_hang.html");
+}
 else {
   echo("Không tìm dc trang");
 }
+
 
 require("admin/footer.php");
 ?>
