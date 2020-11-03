@@ -1,0 +1,485 @@
+
+  <style>
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+			}
+
+	td, th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+		white-space: nowrap;
+			}
+	
+</style>
+
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Khách hàng</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Khách hàng</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+
+      <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Nhóm khách hàng</h3>
+    
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-group">                    
+                    <select class="form-control">
+                      <option> Tất cả các nhóm </option>
+                      <!--TODO-->                
+                    </select>
+                </div>
+                <!-- /.card-body -->
+              </div>           
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Ngày tạo</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio0">
+                      <label class="form-check-label"> Toàn thời gian</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio0">
+                      <label class="form-check-label"> Lựa chọn khác</label>
+                    </div>
+                  </div>                  
+                </div>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->        
+          <!-- /.card -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Người tạo</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Chọn người tạo" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-navbar" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Sinh nhật</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1">
+                      <label class="form-check-label"> Toàn thời gian</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1">
+                      <label class="form-check-label"> Lựa chọn khác</label>
+                    </div>
+                  </div>                  
+                </div>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Ngày giao dịch cuối</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio2">
+                      <label class="form-check-label"> Toàn thời gian</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio2">
+                      <label class="form-check-label"> Lựa chọn khác</label>
+                    </div>
+                  </div>                  
+                </div>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Tổng bán</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="input-group input-group-sm">
+                <p>Từ: <input class="form-control form-control-navbar" type="search" placeholder="0" aria-label="Search"></p>
+            </div>
+            <div class="input-group input-group-sm">
+                <p>Tới: <input class="form-control form-control-navbar" type="search" placeholder="Giá trị" aria-label="Search"></p>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio3">
+                      <label class="form-check-label"> Toàn thời gian</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio3">
+                      <label class="form-check-label"> Lựa chọn khác</label>
+                    </div>
+                  </div>                  
+                </div>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Nợ hiện tại</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="input-group input-group-sm">
+                <p>Từ: <input class="form-control form-control-navbar" type="search" placeholder="0" aria-label="Search"></p>
+            </div>
+            <div class="input-group input-group-sm">
+                <p>Tới: <input class="form-control form-control-navbar" type="search" placeholder="Giá trị" aria-label="Search"></p>
+            </div>            
+            <!-- /.card-body -->
+          </div>
+            <div class="card">
+                <div class="card-header">
+                <h3 class="card-title">Loại khách</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                </div>
+                <div class="card-body p-0">
+                <ul class="nav nav-pills flex-column">
+                    <div class="col-md-7">
+                    <div class="form-group">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio4" checked>
+                        <label class="form-check-label"> Tất cả</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio4">
+                        <label class="form-check-label"> Cá nhân</label>
+                        </div>
+                    </div>     
+                    <div class="form-group">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio4">
+                        <label class="form-check-label"> Công ty</label>
+                        </div>
+                    </div>                   
+                    </div>
+                </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                <h3 class="card-title">Giới tính</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                </div>
+                <div class="card-body p-0">
+                <ul class="nav nav-pills flex-column">
+                    <div class="col-md-7">
+                    <div class="form-group">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio5" checked>
+                        <label class="form-check-label"> Tất cả</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio5">
+                        <label class="form-check-label"> Nam</label>
+                        </div>
+                    </div>     
+                    <div class="form-group">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio5">
+                        <label class="form-check-label"> Nữ</label>
+                        </div>
+                    </div>                   
+                    </div>
+                </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Khu vực</h3>
+    
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="input-group input-group-sm">
+                  <input class="form-control form-control-navbar" type="search" placeholder="Chọn Tỉnh/TP - Quận/Huyện" aria-label="Search">
+                  <div class="input-group-append">
+                    <button class="btn btn-navbar" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <div class="card">
+                <div class="card-header">
+                <h3 class="card-title">Trạng thái</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                    </button>
+                </div>
+                </div>
+                <div class="card-body p-0">
+                <ul class="nav nav-pills flex-column">
+                    <div class="col-md-7">
+                    <div class="form-group">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio5">
+                        <label class="form-check-label"> Tất cả</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio5" checked>
+                        <label class="form-check-label"> Đang hoạt động</label>
+                        </div>
+                    </div>     
+                    <div class="form-group">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio5">
+                        <label class="form-check-label"> Ngưng hoạt động</label>
+                        </div>
+                    </div>                   
+                    </div>
+                </ul>
+                </div>
+            </div>
+        </div>
+      <!-- /.row -->
+    <div class="col-md-9">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+		
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Danh sách khách hàng</h3>
+              </div>
+			
+			
+              <!-- /.card-header -->
+            <div class="card-body">
+						<button class="btn btn-success" style="float: right;">Thêm</button>
+						<button class="btn btn-danger" style="float: right;">Xóa</button>
+                
+				<table id="example3" >
+                  <thead>
+                  <tr>
+					<th><input type="checkbox"></th>
+                    <th>Mã khách hàng</th>
+					<th>Tên khách hàng</th>
+					<th>Loại khách</th>
+					<th>Điện thoại</th>
+					<th>Nhóm khách hàng</th>
+					<th>Giới tính</th>
+					<th>Ngày sinh</th>
+					<th>Email</th>
+					<th>Công ty</th>
+					<th>Mã số thuế</th>
+					<th>Địa chỉ</th>
+					<th>Khu vực</th>
+					<th>Phường/Xã</th>
+					<th>Người tạo</th>
+					<th>Ngày tạo</th>
+					<th>Ngày giao dịch cuối</th>
+					<th>Nợ hiện tại</th>
+					<th>Tổng bán</th>
+					<th>Tổng bán trừ hàng</th>
+					<th>Trạng thái</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+					<td><input type="checkbox"></td>
+                    <td>KH000001</td>
+                    <td>Anh Giang</td>
+					<td>Cá nhân</td>
+					<td>031354516</td>
+					<td>A</td>
+					<td>Nam</td>
+					<td>1995-08-25</td>
+					<td>alaconda@gmail.com</td>
+					<td> </td>
+					<td> </td>
+					<td>Số 32 Nguyễn Công Trứ</td>
+					<td>Hà Nội</td>
+					<td>Hai Bà Trưng</td>
+					<td>Ngô Việt Trung</td>
+					<td>2020-01-30</td>
+					<td>2020-09-15</td>
+					<td>0</td>
+					<td>1.000.000</td>
+					<td>1.000.000</td>
+					<td>Hoạt động</td>
+                  </tr>
+				  <tr>
+					<td><input type="checkbox"></td>
+                    <td>KH000002</td>
+                    <td>Đức An</td>
+					<td>Cá nhân</td>
+					<td>0313522516</td>
+					<td>A</td>
+					<td>Nam</td>
+					<td>1997-08-25</td>
+					<td>alaconda@gmail.com</td>
+					<td> </td>
+					<td> </td>
+					<td>Số 32 Tố Hữu</td>
+					<td>Hà Nội</td>
+					<td> </td>
+					<td>Ngô Việt Trung</td>
+					<td>2020-01-30</td>
+					<td>2020-09-05</td>
+					<td>0</td>
+					<td>1.000.000</td>
+					<td>1.000.000</td>
+					<td>Hoạt động</td>
+                  </tr>
+				  </tbody>
+				</table>
+				 
+				
+			</div>
+		
+				
+			
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+    </div>
+  </div>
+
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  
+  $(function () {
+    $("#example2").DataTable({
+	"searching": true,
+	"responsive": true,
+    "autoWidth": true,
+	"scrollX": true ,
+	});
+  });
+  
+</script>
+<script>
+$(document).ready(function () {
+$('#example3').DataTable({
+"scrollX": true
+});
+$('.dataTables_length').addClass('bs-select');
+});
+</script>
+
+
+
