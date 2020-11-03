@@ -1,0 +1,285 @@
+
+  <style>
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+			}
+
+	td, th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+		white-space: nowrap;
+
+			}
+</style>
+
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Phiếu nhập hàng</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Phiếu nhập hàng</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+<div class="row">
+    <!-- Main content -->
+    
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Thời gian</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio0">
+                      <label class="form-check-label"> Tháng này</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio0">
+                      <label class="form-check-label"> Lựa chọn khác</label>
+                    </div>
+                  </div>                  
+                </div>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Trạng thái</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>           
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" checked>
+                      <label class="form-check-label"> Phiếu tạm</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" checked>
+                      <label class="form-check-label"> Đã nhập hàng</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label"> Đã hủy</label>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Người tạo</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Chọn người tạo" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-navbar" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Người nhận</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Chọn người" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+      
+    <!-- /.content -->
+<div class="col-md-9">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+		
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Nhập hàng</h3>
+              </div>
+			
+			
+              <!-- /.card-header -->
+            <div class="card-body">
+						<button class="btn btn-success" style="float: right;">Thêm</button>
+						<button class="btn btn-danger" style="float: right;">Xóa</button>
+                <table id="example3">
+                  <thead>
+                  <tr>
+					<th><input type="checkbox"></th>
+                    <th>Mã nhập hàng</th>
+                    <th>Thời gian</th>
+					<th>Thời gian tạo</th>
+					<th>Ngày cập nhật</th>
+                    <th>Nhà cung cấp</th>
+					<th>Chi nhánh</th>
+					<th>Người nhập</th>
+                    <th>Người tạo</th>
+					<th>Tổng số lượng</th>
+					<th>Tổng số mặt hàng</th>
+					<th>Tổng tiền hàng</th>
+					<th>Giảm giá</th>
+					<th>Cần trả NCC</th>
+                    <th>Ghi chú</th>
+                    <th>Trạng thái</th>	
+					
+                  </tr>
+                  </thead>
+					
+                  <tbody>
+                  <tr>
+					<td><input type="checkbox"></td>
+                    <td>PN2124214</td>
+                    <td>2020-09-12</td>
+                    <td>2020-09-12</td>
+                    <td></td>
+					<td>Công ty Thời Trang Việt</td>
+					<td>Chi nhánh Trung tâm</td>
+					<td>Nguyễn Thị Thái Hòa</td>
+					<td>Nguyễn Thị Thái Hòa</td>
+					<td>32.00</td>
+					<td>2</td>
+					<td>42,150,000đ</td>
+					<td>200,000đ</td>
+					<td>77,787,000</td>
+					<td></td>
+					<td>Đã nhận hàng</td>
+                  </tr>
+				  <tr>
+					<td><input type="checkbox"></td>
+                    <td>PN212432214</td>
+                    <td>2020-09-02</td>
+                    <td>2020-09-02</td>
+                    <td></td>
+					<td>Công ty TNHH Nhân Hòa</td>
+					<td>Chi nhánh Đông Anh</td>
+					<td>Trần Thanh Nhung</td>
+					<td>Trần Thanh Nhung</td>
+					<td>32.00</td>
+					<td>2</td>
+					<td>42,150,000đ</td>
+					<td>200,000đ</td>
+					<td>77,787,000</td>
+					<td></td>
+					<td>Đã nhận hàng</td>
+
+                  </tr>
+                  </tbody>
+				  </table>
+				 </div>
+			</div>
+		
+				
+			
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+</div>
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {\
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": true,
+	  "searching": true,
+	  "info": true,
+	  "paging": true,
+	  "filter": true,
+    });
+    
+  });
+  $(function () {
+    $("#example2").DataTable({
+	"searching": true,
+	"responsive": true,
+    "autoWidth": true,
+	 
+	});
+  });
+  
+</script>
+
+<script>
+						$(document).ready(function () {
+						$('#example3').DataTable({
+						"scrollX": true
+						});
+						$('.dataTables_length').addClass('bs-select');
+						});
+						</script>

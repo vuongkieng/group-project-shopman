@@ -1,0 +1,492 @@
+
+
+<style>
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+ }
+
+ td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  white-space: nowrap;
+}
+td>a{
+  text-decoration: none;
+}
+.accordion{
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.active {
+  background-color: #ccc;
+}
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+
+
+<!-- jQuery -->
+
+
+<!-- page script -->
+
+<div class="row">
+  <div class="col-md-3">
+    
+    <!-- Content Header (Page header) -->
+    
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Loại hàng</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label"> Hàng hóa</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label"> Dịch vụ</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label"> Combo - Đóng gói</label>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Nhóm hàng</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Tìm kiếm" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name ='radio0' checked>
+                      <label class="form-check-label"> Tất cả</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio0">
+                      <label class="form-check-label"> Thời trang nam</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio0">
+                      <label class="form-check-label"> Thời trang nữ</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio0">
+                      <label class="form-check-label"> Phụ kiện nam</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio2">
+                      <label class="form-check-label"> Phụ kiện nữ</label>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Tồn Kho</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1" checked>
+                      <label class="form-check-label"> Tất cả</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1">
+                      <label class="form-check-label"> Dưới định mức tồn</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1">
+                      <label class="form-check-label"> Vượt định mức tồn</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1">
+                      <label class="form-check-label"> Còn hàng trong kho</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio1">
+                      <label class="form-check-label"> Hết hàng trong kho</label>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Bán trực tiếp</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio2" checked>
+                      <label class="form-check-label"> Tất cả</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio2">
+                      <label class="form-check-label"> Được bán trực tiếp</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio3">
+                      <label class="form-check-label"> Không được bán trực tiếp</label>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"> Ngày dự kiến hết hàng</h3>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio3" checked>
+                      <label class="form-check-label"> Toàn thời gian</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio3">
+                      <label class="form-check-label"> Lựa chọn khác</label>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Nhà cung cấp</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Chọn nhà cung cấp" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"> Liên kết kênh bán</h3>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio4" checked>
+                      <label class="form-check-label"> Tất cả</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio4">
+                      <label class="form-check-label"> Có liên kết kênh bán</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio4">
+                      <label class="form-check-label"> Không có liên kết kênh bán</label>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"> Lựa chọn hiển thị</h3>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio5" checked>
+                      <label class="form-check-label"> Tất cả</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio5">
+                      <label class="form-check-label"> Hàng đang kinh doanh</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="radio5">
+                      <label class="form-check-label"> Hàng ngừng kinh doanh</label>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-3"></div>
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  
+  </div>
+  <div class="col-md-9">
+    
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Bảng dữ liệu</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">DataTables</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Các mặt hàng</h3>
+              </div>
+
+
+              <!-- /.card-header -->
+              <div class="card-body">
+                <button class="btn btn-success" style="float: right;">Thêm</button>
+                <button class="btn btn-danger" style="float: right;">Xóa</button>
+                <table id="example3">
+                  <thead>
+                    <tr>
+                      <th><input type="checkbox"></th>
+                      <th>Mã hàng</th>
+                      <th>Tên hàng</th>
+                      <th>Giá bán</th>
+                      <th>Giá vốn</th>
+                      <th>Tồn kho</th>
+                      <th>KH đặt</th>
+                      <th>Dự kiến hết hàng</th>
+                      <th>Chi tiết</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- <button class="accordion"></button> -->
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>NU012</td>
+                        <td>Thắt lưng nữ LV34</td>
+                        <td>200,000đ</td>
+                        <td>56,000đ</td>
+                        <td>15</td>
+                        <td>4</td>
+                        <td>0 ngày</td>
+                        <td><a href="admin/Chitietsp.html">Chi tiết</a></td>
+                      </tr>
+                    
+                
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>NU012</td>
+                        <td>Thắt lưng nam LV35</td>
+                        <td>200,000đ</td>
+                        <td>57,000đ</td>
+                        <td>15</td>
+                        <td>2</td>
+                        <td>10 ngày</td>
+                        <<td><a href="admin/Chitietsp.html">Chi tiết</a></td>
+                     </tr>
+                    
+                    </div>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  
+  </div>
+</div>
+
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+ -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": true,
+      "searching": true,
+      "info": true,
+      "paging": true,
+      "filter": true,
+    });
+
+  });
+  $(function () {
+    $("#example2").DataTable({
+     "searching": true,
+     "responsive": true,
+     "autoWidth": true,
+
+   });
+  });
+
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('#example3').DataTable({
+      "scrollX": true
+    });
+    $('.dataTables_length').addClass('bs-select');
+  });
+</script>
+
+<!-- <script>
+  var acc = document.getElementsByClassName("accordion");
+
+  for (var i = 0; i< acc.length ; i++) {
+    acc[i].addEventListener("click", function(){
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+</script> -->
+
+<script>
+  $(document).ready(function(){
+    // $('.accordion').each(function(index){
+    //   $(this).eq(index).on('click', function(){
+    //     $('.panel').eq(index).slideToggle();
+    //   })
+    // });
+    $('.accordion').each(function(){
+      $(this).on('click',function(){
+        $('.accordion + div').slideToggle();
+      })
+    });
+    
+  });
+</script>

@@ -1,3 +1,22 @@
+<?php
+function bignavheader ($name){
+  ?>
+  <li class="nav-header">
+    <?php echo "$name";
+    ?>
+  </li>
+  <?php
+};
+function navlink ($name,$uri,$icon){ ?>
+  <li class="nav-item">
+  <a href="<?=$uri?>" class="nav-link">
+    <i class="nav-icon fas <?=$icon?>"></i>
+    <p> <?=$name?> </p>
+  </a>
+  </li>
+  <?php
+}
+?>
 <html>
   <head>
     <meta charset="utf-8">
@@ -179,14 +198,25 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <div class="nav nav-pills nav-sidebar flex-column">
-            <a href="/" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>Tổng quan</p>
-            </a>
-            <a href="/datakh" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>Khách hàng</p>
-            </a>
+            
+            <?=navlink("TỔNG QUAN","/","fa-chart-line")?>
+            <?php bignavheader ("HÀNG HÓA") ?>
+            <?=navlink("Danh mục","/danhmucsp","fa-sitemap")?>
+            <?=navlink("Thiết lập giá","/thietlapgia","fa-tags")?>
+            <?=navlink("Kiểm kho","/kiemkho","fa-warehouse")?>
+            <?=bignavheader("GIAO DỊCH")?>
+            <?=navlink("Đơn đặt hàng","/donhang","fa-receipt")?>
+            <?=navlink("Hóa đơn","/hoadon","fa-file-invoice")?>
+            <?=navlink("Nhập hàng","/nhaphang","fa-archive")?>
+            <?=bignavheader("ĐỐI TÁC")?>
+            <?=navlink("Khách hàng","/khachhang","fa-user-tie")?>
+            <?=navlink("Nhà cung cấp","/ncc","fa-people-arrows")?>
+            <?=bignavheader("NHÂN VIÊN")?>
+            <?=navlink("Nhân viên","/nhanvien","fa-user-friends")?>
+            <?=navlink("Bảng tính lương","/bangluong","fa-search-dollar")?>
+            <?=bignavheader("SỔ QUỸ")?>
+            <?=navlink("Sổ quỹ","/soquy","fa-money-check-alt")?>
+
         </div>
       </nav>
       <!-- /.sidebar-menu -->

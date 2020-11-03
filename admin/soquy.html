@@ -1,0 +1,181 @@
+
+  <style>
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+			}
+
+	td, th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+		white-space: nowrap;
+			}
+	
+</style>
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Sổ quỹ</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Sổ quỹ</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+		
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Sổ quỹ tiền mặt</h3>
+              </div>
+			
+			
+              <!-- /.card-header -->
+            <div class="card-body">
+							<div class="row">
+								  <div class="col-sm-3 col-6">
+									<div class="description-block border-right">
+									  <h5 class="description-header">0</h5>
+									  <span class="description-text">Quỹ đầu kỳ</span>
+									</div>
+									<!-- /.description-block -->
+								  </div>
+								  <!-- /.col -->
+								  <div class="col-sm-3 col-6">
+									<div class="description-block border-right">
+									<h5 class="description-header">1,025,307,900</h5>
+									  <span class="description-text">Tổng thu</span>
+									</div>
+									<!-- /.description-block -->
+								  </div>
+								  <!-- /.col -->
+								  <div class="col-sm-3 col-6">
+									<div class="description-block border-right">
+									<h5 class="description-header">-1,025,307,900</h5>
+									 <span class="description-text">Tổng chi</span>
+									</div>
+									<!-- /.description-block -->
+								  </div>
+								  <!-- /.col -->
+								  <div class="col-sm-3 col-6">
+									<div class="description-block">
+									<h5 class="description-header">0</h5>
+									  <span class="description-text">Tồn quỹ</span>
+									<div class="card-tools">
+									<span data-toggle="tooltip" title="Tồn quỹ = Quỹ đầu kỳ + Tổng thu - Tổng chi" class="badge badge-warning">!</span>
+									</div>
+									</div>
+									<!-- /.description-block -->
+								  </div>
+								</div>
+					<button class="btn btn-success" style="float: right;">Thêm</button>
+					<button class="btn btn-danger" style="float: right;">Xóa</button>
+                
+				<table id="example3" >
+                  <thead>
+                  <tr>
+					<th><input type="checkbox"></th>
+                    <th>Mã phiếu</th>
+					<th>Thời gian</th>
+					<th>Thời gian tạo</th>
+					<th>Người tạo</th>
+					<th>Chi nhánh</th>
+					<th>Loại thu chi</th>
+					<th>Mã người nộp/nhận</th>
+					<th>Người nộp/nhận</th>
+					<th>Số điện thoại</th>
+					<th>Địa chỉ</th>
+					<th>Giá trị</th>
+					<th>Ghi chú</th>
+					<th>Trạng thái</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+					<td><input type="checkbox"></td>
+                    <td>TTHD00046</td>
+					<td>29/10/2020 12:39</td>
+					<td>29/10/2020 12:39</td>
+					<td>Phung Anh Hoang</td>
+					<td>Chi nhánh trung tâm</td>
+					<td>Thu tiền khách trả</td>
+					<td>KH000001</td>
+					<td>Anh Giang</td>
+					<td>031354516</td>
+					<td></td>
+					<td>29,056,400</td>
+					<td></td>
+					<td>Đã thanh toán</td>
+                  </tr>
+				  
+				  
+				  </tbody>
+				</table>
+				 
+				
+			</div>
+		
+				
+			
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  
+  $(function () {
+    $("#example2").DataTable({
+	"searching": true,
+	"responsive": true,
+    "autoWidth": true,
+	"scrollX": true ,
+	});
+  });
+  
+  
+</script>
+<script>
+$(document).ready(function () {
+$('#example3').DataTable({
+"scrollX": true
+});
+$('.dataTables_length').addClass('bs-select');
+});
+</script>
+
+
